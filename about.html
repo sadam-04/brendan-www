@@ -2,7 +2,9 @@
 <html lang="en">
     <meta charset="UTF-8">
 
-    <title>Merry Xmas!</title>
+    <title>Merry Xmas Brendan!</title>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="">
@@ -111,8 +113,17 @@
             margin-bottom: auto;
         }
 
+        .content .landing-area .landing-content .arrows {
+            position:absolute;
+            bottom: 0%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
         .content .landing-area .landing-content .arrows img {
-            margin-top: 25%;
             width: 5%;
         }
 
@@ -125,13 +136,13 @@
         .content .section {
             display: flex;
             flex-direction: row;
-            padding: 0% 5%;
+            padding: 0vh 5vw;
             margin: auto;
             width: 80%;
         }
         
         .content .section:not(:first-child) {
-            height: 400px;
+            padding: 5vh 5vw;
         }
 
         .content .section:nth-child(even) {
@@ -169,7 +180,8 @@
 
         .content .section .text span {
             font-size: 125%;
-            margin-left: 15px;
+            margin-left: 30px;
+            margin-right: 30px;
         }
 
         /* apply margin: auto first, then set margin-bottom to hold footer at the bottom of the page */
@@ -234,17 +246,13 @@
             }
 
             .content .landing-area .landing-content .arrows img {
-                margin-top: 40%;
-            }
-
-            .content .landing-area .landing-content .arrows img {
                 width: 10%;
             }
 
             .content .section {
                 flex-direction: column;
-                margin-bottom: 40px;
-                padding-bottom: 20px;
+                justify-content: space-around;
+                padding: 10px 10px;
             }
 
             .content .text-first {
@@ -258,6 +266,8 @@
             }
 
             .content .section .img-wrap {
+                margin-top: 10px;
+                margin-bottom: 10px;
                 width: 60vw;
             }
         }
@@ -274,13 +284,13 @@
                 </div>
                 <div class="links">
                     <a href="index.html" class="link-dot">home</a>
-                    <a href="about.html" class="link-dot">about</a>
+                    <a href="about.html" class="link-dot">javascript</a>
                 </div>
             </div>
 
             <!-- this applies the properties from both .content and .center -->
             <div class="content">
-                Put whatever you want here!
+                
             </div>
 
             <!-- sticky footer. Appears off screen if there is scrollable content below the viewport, or at the bottom of the screen if the viewport is scrolled to the page end  -->
