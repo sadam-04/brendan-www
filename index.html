@@ -2,7 +2,7 @@
 <html lang="en">
     <meta charset="UTF-8">
 
-    <title>Page Title</title>
+    <title>Merry Xmas!</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="">
@@ -142,8 +142,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: fit-content;
+            margin: auto;
             height: 100%;
+        }
+
+        .content .section .img-wrap img
+        {
+            width: 100%;
         }
 
         .content .section .text
@@ -152,6 +157,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: auto;
             width: 100%;
         }
 
@@ -165,14 +171,15 @@
 
         /* override default blue/purple, and add a hover-activated dotted underline */
         .link-dot {
-            text-decoration: none;
+            /* text-decoration: none; */
             color: white;
             transform: translate(0px, 0px); /* by default, there should be no translation/shift, but when hovered over (see .link-dot:hover below), shift up 5px */
             transition: all 0.2s;
+            text-decoration: dotted underline;
         }
         
         .link-dot:hover {
-            text-decoration: dotted underline;
+            text-decoration: solid underline;
             transform: translate(0, -5px);
         }
 
@@ -204,7 +211,7 @@
             <!-- class="navbar" applies all the css properties within the .navbar scope above to this div -->
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html" class="link-inv">Brendan Saich</a>
+                    <a href="index.html" class="link-inv">brendansai.ch</a>
                 </div>
                 <div class="links">
                     <a href="index.html" class="link-dot">home</a>
@@ -216,26 +223,36 @@
             <div class="content">
                 <div class="landing-area section">
                     <div class="landing-content">
-                        <h1 class="center-h">&#x1f44b; Hi, I'm Brendan</h1>
-                        <span class="center-h">I like robotics, playing the bells, and soccer.</span>
+                        <h1 class="center-h">&#x1f44b; Hi Brendan&nbsp;&nbsp;&nbsp;</h1>
+                        <span class="center-h">This is your christmas gift</span>
+                        <span class="center-h" style="margin-top: 15%; font-size: 300%;">&#x1f863;&#x1f863;&#x1f863;</span>
                     </div>
                 </div>
 
                 <div class="section">
-                    <div class="img-wrap">
-                        <img src="img/bells-crop.jpeg" height="370"/>
+                    <div class="img-wrap" style="width: 400px;">
+                        <img src="https://files.namecheap.com/cdn/1208/assets/img/logos/namecheap.svg"/>
                     </div>
-                    <div class="text">
-                        <span class="line" style="font-size: 200%;">My bells</span>
+                    <div class="text" style="width: 40%;">
+                        <h2 class="line">The Domain</h2>
+                        <span class="line" style="font-size: 125%; margin-left: 15px;">The first part is the domain brendansai.ch. You can create an account with any .CH-supporting registrar (<a href="https://www.namecheap.com" class="link-dot">namecheap</a>), and I will transfer the domain to your account.</span>
                     </div>
                 </div>
 
                 <div class="section">
-                    <div class="img-wrap">
-                        <img src="img/bells-crop.jpeg" height="370"/>
+                    <div class="text" style="width: 40%;">
+                        <h2 class="line">The Site</h2>
+                        <span class="line" style="font-size: 125%; margin-left: 15px;">This is a static site being hosted by <a href="https://github.com/sadam-04/brendan-www" class="link-dot">GitHub Pages</a>. I will transfer the repo for this site to you as well. You can update the site by committing to the 'production' branch. Github pages can serve any static content, so anything you can do with HTML, CSS and JavaScript will work.</span>
                     </div>
-                    <div class="text">
-                        <span class="line" style="font-size: 200%;">My bells</span>
+                    <div class="img-wrap" style="width: 50%;">
+                        <img src="https://pngimg.com/uploads/github/github_PNG23.png"/>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="text" style="width: 75%;">
+                        <h2 class="line">Other Options</h2>
+                        <span class="line" style="font-size: 125%; margin-left: 15px;">Since you own the domain, you have full control over its DNS settings. That means you have full control over where this domain name points. You can even create subdomains (sub.brendansai.ch) and configure each one differently!</span>
                     </div>
                 </div>
             </div>
