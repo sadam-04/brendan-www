@@ -2,7 +2,9 @@
 <html lang="en">
     <meta charset="UTF-8">
 
-    <title>Merry Xmas!</title>
+    <title>Merry Xmas Brendan!</title>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="">
@@ -111,8 +113,17 @@
             margin-bottom: auto;
         }
 
+        .content .landing-area .landing-content .arrows {
+            position:absolute;
+            bottom: 0%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
         .content .landing-area .landing-content .arrows img {
-            margin-top: 25%;
             width: 5%;
         }
 
@@ -125,13 +136,13 @@
         .content .section {
             display: flex;
             flex-direction: row;
-            padding: 0% 5%;
+            padding: 0vh 5vw;
             margin: auto;
             width: 80%;
         }
         
         .content .section:not(:first-child) {
-            height: 400px;
+            padding: 5vh 5vw;
         }
 
         .content .section:nth-child(even) {
@@ -235,17 +246,13 @@
             }
 
             .content .landing-area .landing-content .arrows img {
-                margin-top: 60%;
-            }
-
-            .content .landing-area .landing-content .arrows img {
                 width: 10%;
             }
 
             .content .section {
                 flex-direction: column;
-                margin-bottom: 40px;
-                padding-bottom: 20px;
+                justify-content: space-around;
+                padding: 10px 10px;
             }
 
             .content .text-first {
@@ -259,6 +266,8 @@
             }
 
             .content .section .img-wrap {
+                margin-top: 10px;
+                margin-bottom: 10px;
                 width: 60vw;
             }
         }
@@ -275,7 +284,7 @@
                 </div>
                 <div class="links">
                     <a href="index.html" class="link-dot">home</a>
-                    <a href="about.html" class="link-dot">about</a>
+                    <a href="about.html" class="link-dot">javascript</a>
                 </div>
             </div>
 
@@ -285,7 +294,9 @@
                     <div class="landing-content">
                         <h1 class="center-h">Merry Christmas, Brendan!</h1>
                         <span class="center-h">From Adam. Scroll down to see details.</span>
-                        <span class="center-h arrows"><img src="img/arrow.png"><img src="img/arrow.png"><img src="img/arrow.png"></span>
+                        <div class="center-h arrows">
+                            <img src="img/arrow.png"><img src="img/arrow.png"><img src="img/arrow.png">
+                        </div>
                     </div>
                 </div>
 
@@ -312,9 +323,15 @@
                 </div>
 
                 <div class="section">
+                    <div class="img-wrap" style="width: 30vw;">
+                        <img src="img/bren1.jpeg"/>
+                    </div>
                     <div class="text">
                         <h2 class="line">Other Options</h2>
                         <span class="line">Since you own the domain, you have full control over its DNS settings. That means you can configure this domain and all its subdomains to point wherever you want when they are entered as a URL. They can point to other web servers, (either by domain name or IP address), email servers, or any other server on the internet.</span>
+                    </div>
+                    <div class="img-wrap" style="width: 30vw;">
+                        <img src="img/shark.jpeg"/>
                     </div>
                 </div>
             </div>
