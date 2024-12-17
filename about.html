@@ -4,207 +4,21 @@
 
     <title>Merry Xmas!</title>
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@87.5,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
-    <style>
-
-        /* set color variables to avoid hardcoding them throughout */
-        :root {
-            --nav-bg: #24470e;
-            --main-bg: #1f3d0c;
-            --main-bg-lite: #24470e;
-
-            --punchout-bg: #336314;
-        }
-
-        html {
-            font-family: "Roboto Slab", serif;
-            font-optical-sizing: auto;
-        }
-
-        body {
-            margin: 0;
-            color: white;
-            background-color: var(--main-bg);
-        }
-
-        /* stack the navbar, content, and footer divs on top of each other (column), and ensure the container spans the full screen height */
-        .container {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
-
-        /* sticky navbar, this keeps the navbar visible and at the top of the page even if you scroll down the page */
-        .navbar {
-            height: 5vh;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 20px 0px;
-            background-color: var(--nav-bg);
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* currenty just your name "Brendan Saich", but could be replaced with a signature or logo or something */
-        .navbar .logo {
-            font-size: 175%;
-            margin: auto;
-            margin-left: 5%;
-        }
-
-        .navbar .links {
-            font-size: 130%;
-            display: flex;
-            justify-content: space-between;
-            width: 15%;
-            margin: auto;
-            margin-right: 5%;
-        }
-
-        .navbar .links a {
-            margin: auto;
-        }
-
-        .content {
-            /* display: flex; */
-            width: 100%;
-            background-color: var(--main-bg);
-            /* justify-content: space-between; */
-            margin: 0 auto;
-            /* margin-top: 3.5vh; */
-            overflow: hidden;
-        }
-
-        .content h1 {
-            margin: 5px;
-            font-size: 450%;
-        }
-
-        .content hr {
-            border-width: 1px;
-            margin-left: 0px;
-        }
-                
-        .content .landing-area {
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-        }
-
-        .content .landing-area .landing-content {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            /* margin: auto; */
-            margin-top: 30vh;
-            margin-bottom: auto;
-        }
-
-        .content .section .punchout {
-            background-color: var(--punchout-bg);
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5) inset;
-            padding: 10px 5px;
-        }
-
-        .content .section {
-            display: flex;
-            flex-direction: row;
-            padding: 15px 30px;
-            margin: auto;
-            width: 90%;
-        }
-        
-        .content .section:not(:first-child) {
-            height: 400px;
-        }
-
-        .content .section:nth-child(even) {
-            background-color: var(--main-bg-lite);
-            box-shadow: inset 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-
-        .content .section:nth-child(odd) {
-            background-color: var(--main-bg);
-        }
-
-        .content .section .img-wrap
-        {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            height: 100%;
-        }
-
-        .content .section .img-wrap img
-        {
-            width: 100%;
-        }
-
-        .content .section .text
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            width: 100%;
-        }
-
-        /* apply margin: auto first, then set margin-bottom to hold footer at the bottom of the page */
-        .footer {
-            color: white;
-            margin: auto;
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-
-
-        /* override default blue/purple, and add a hover-activated dotted underline */
-        .link-dot {
-            /* text-decoration: none; */
-            color: white;
-            transform: translate(0px, 0px); /* by default, there should be no translation/shift, but when hovered over (see .link-dot:hover below), shift up 5px */
-            transition: all 0.2s;
-            text-decoration: dotted underline;
-        }
-        
-        .link-dot:hover {
-            text-decoration: solid underline;
-            transform: translate(0, -5px);
-        }
-
-        /* override default blue/purple links, and remove underline */
-        .link-inv {
-            text-decoration: none;
-            color: white;
-        }
-
-        /* horizontally center elements */
-        .center-h {
-            margin: 0 auto;
-            text-align: center;
-            width: 100%;
-        }
-
-        /* horizontally and verticaly center elements */
-        .center {
-            margin: auto;
-            text-align: center;
-            width: 100%;
-        }
-
-    </style>
+    <head>
+        <style>
+            @media (max-width: 992px) {
+                body {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
 
     <body>
         <div class="container">
@@ -212,7 +26,7 @@
             <!-- class="navbar" applies all the css properties within the .navbar scope above to this div -->
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html" class="link-inv">brendansai.ch</a>
+                    <a href="index.html" class="link-inv logo">brendansai.ch</a>
                 </div>
                 <div class="links">
                     <a href="index.html" class="link-dot">home</a>
