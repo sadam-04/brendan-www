@@ -226,6 +226,10 @@
             width: 100%;
         }
 
+        .js-canvas {
+            background-color: white;
+        }
+
         /* .inline-img {
             display: none;
         } */
@@ -284,13 +288,14 @@
                 </div>
                 <div class="links">
                     <a href="index.html" class="link-dot">home</a>
-                    <a href="about.html" class="link-dot">javascript</a>
+                    <span class="link-dot" onclick="melt()">javascript</span>
                 </div>
             </div>
 
             <!-- this applies the properties from both .content and .center -->
             <div class="content">
-                
+                <canvas id="canvas" class="js-canvas" width="300" height="300">hi</canvas>
+                <button id="addBall">Start</button>
             </div>
 
             <!-- sticky footer. Appears off screen if there is scrollable content below the viewport, or at the bottom of the screen if the viewport is scrolled to the page end  -->
@@ -301,4 +306,47 @@
 
         </div>
     </body>
+
+    <script>
+        var all = document.getElementsByTagName("*");
+        var ws = [];
+        var hs = [];
+
+        for (var i = 0; i < all.length; i++) {
+            _a = Math.floor((Math.random() * 6) - 3);
+            _b = Math.floor((Math.random() * 6) - 3);
+            
+            console.log(_a, _b);
+            
+            ws.push(_a);
+            hs.push(_b);
+        }
+
+        function melt() {
+            setInterval(function() {
+                for (var i=0; i < all.length; i++)
+                {
+                    const cw = parseInt(window.getComputedStyle(all[i]).width, 10);
+                    const ch = parseInt(window.getComputedStyle(all[i]).height, 10);
+
+                    if (!isNaN(cw)) {
+                        all[i].style.width = `${cw + ws[i]}px`;
+                    }
+
+                    if (!isNaN(ch)) {
+                        all[i].style.height = `${ch + hs[i]}px`;
+                    }
+                    // console.log("Before:", all[i].style.width);
+                    // all[i].style.width = `${widthValue + 2}px`
+
+                    // if (!isNaN(widthValue)) {
+                    //     element.style.width = `${widthValue + 2}px`;
+                    // }
+                    // all[i].style.height += hs[i];
+                    // console.log("After:", all[i].style.width);
+                }
+            }, 100);
+        }
+
+    </script>
 </html>
