@@ -350,15 +350,27 @@
         var all = document.getElementsByTagName("*");
         var ws = [];
         var hs = [];
+        var fss = [];
+
+        function getRand()
+        {
+            return Math.floor((Math.random() * 6) - 6);
+        }
 
         for (var i = 0; i < all.length; i++) {
-            _a = Math.floor((Math.random() * 6) - 3);
-            _b = Math.floor((Math.random() * 6) - 3);
-            
+            _a = getRand();
+            _b = getRand();
+            _c = getRand();
+
             console.log(_a, _b);
             
-            ws.push(_a);
-            hs.push(_b);
+            // ws.push(_a);
+            // hs.push(_b);
+            // fss.push(_c);
+
+            ws.push(getRand());
+            hs.push(getRand());
+            fss.push(getRand());
         }
 
         function melt() {
